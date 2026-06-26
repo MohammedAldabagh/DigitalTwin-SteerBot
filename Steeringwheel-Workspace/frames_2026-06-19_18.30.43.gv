@@ -1,0 +1,18 @@
+digraph G {
+"world" -> "g29_joint_axis"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "link1"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"base_offset" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"link1" -> "link2"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"link2" -> "link3"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"link3" -> "link4"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"link4" -> "link5"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"link5" -> "link6"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"gripper_base" -> "link7"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"gripper_base" -> "link8"[label=" Broadcaster: default_authority\nAverage rate: 60.2\nBuffer length: 5.017\nMost recent transform: 1781886643.509615\nOldest transform: 1781886638.492998\n"];
+"gripper_base" -> "ee_tcp"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "base_offset"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1781886643.516359"[ shape=plaintext ] ;
+}->"world";
+}

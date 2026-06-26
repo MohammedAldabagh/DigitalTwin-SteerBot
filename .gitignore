@@ -1,0 +1,35 @@
+# ===== ROS 2 / colcon build artifacts (generated, do not commit) =====
+build/
+install/
+log/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.so
+
+# ===== Editors / IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+
+# ===== Project-specific generated / backup files =====
+# Redundant backup archive of the carla workspace
+Steeringwheel-Workspace/carla_ros_ws.zip
+# Third-party force-feedback driver (cloned separately)
+ros-g29-force-feedback/
+Steeringwheel-Workspace/ros2_ws/src/ros-g29-force-feedback/
+Steeringwheel-Workspace/ros2_ws/fake_steering.py
+
+# Backup USD scenes
+Steeringwheel-Workspace/isaac/scenes/BAKScene2.usd
+Steeringwheel-Workspace/isaac/scenes/BAKScene_old.usd
+Steeringwheel-Workspace/isaac/scenes/editing_layer_bak.usd
+Steeringwheel-Workspace/isaac/scenes/our_table.usd
+Steeringwheel-Workspace/isaac/scenes/table_bak.usd
