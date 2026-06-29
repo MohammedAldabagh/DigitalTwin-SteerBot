@@ -34,7 +34,7 @@ def generate_launch_description():
         description="Publish static wheel TF from center/quaternion parameters"
     )
 
-    wheel_center_x_arg = DeclareLaunchArgument("wheel_center_x", default_value="0.63854") 
+    wheel_center_x_arg = DeclareLaunchArgument("wheel_center_x", default_value="0.60")  ## wheel pivot is at 0.6385; 0.60 offsets for gripper finger length + keeps arm in reach (smooth arc). Was 0.63854.
     wheel_center_y_arg = DeclareLaunchArgument("wheel_center_y", default_value="0.0")
     wheel_center_z_arg = DeclareLaunchArgument("wheel_center_z", default_value="0.85729")
     start_angle_deg_arg = DeclareLaunchArgument("start_angle_deg", default_value="90.0") ## used 
