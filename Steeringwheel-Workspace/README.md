@@ -235,6 +235,49 @@ For the Piper robot arm (separate from CARLA):
 
 ---
 
+### Option D — Grab + Rotate: Piper arm turns the virtual G29 (Isaac Sim)
+
+The Piper arm grabs the virtual G29 rim and rotates it. Runs entirely in Isaac Sim
+(no CARLA, no physical wheel needed).
+
+**Prerequisites**
+- Isaac Sim open with the working scene **`isaac/scenes/BAK_XIA_scene_5_april21.usd`**
+  loaded and **Play** pressed (physics running).
+- The wheel free-spins on its own (`RevoluteJoint` drive `stiffness = 0` is saved in the
+  scene), so `g29_force_ros2_driver_scene5.py` is **not** needed for grab+rotate. (That
+  driver is only for the force-feedback / steering loop via `/g29/target_force`.)
+
+**Three terminals** — each one first:
+```bash
+cd ~/Steeringwheel-Workspace/ros2_ws && source install/setup.bash
+```
+
+```bash
+# Terminal 1 — controllers
+ros2 launch piper_with_gripper_moveit controller_bringup_gripper.launch.py fake_hardware:=true use_sim_time:=true
+
+# Terminal 2 — MoveIt (move_group + RViz)
+ros2 launch piper_with_gripper_moveit moveit_dt_gripper.launch.py use_sim_time:=true
+
+# Terminal 3 — grab + rotate
+ros2 launch piper_demo piper_grab_rotate.launch.py mode:=rotate radius:=0.13 use_sim_time:=true wheel_center_x:=0.60
+```
+
+> **⚠️ The `wheel_center_x:=0.60` flag is required.** The wheel's real pivot is at x≈0.6385,
+> but the launch *default* (0.63854) makes the arm over-extend at the grasp — `computeCartesianPath`
+> then fails (fraction ~0.04) and falls back to 24 stop-start segments = **jerky** motion.
+> `wheel_center_x:=0.60` keeps the arm in comfortable reach (smooth one-shot arc) **and** offsets
+> for the gripper's finger length so the fingers land on the rim while the wrist stays clear.
+> Do **not** physically move the wheel to 0.60 — that puts the rim where the wrist goes and the arm
+> pushes it.
+
+A good run logs `4) Rotate along wheel plane` followed by a single `Execute request success!`
+with **no** "Falling back to segmented" line.
+
+**Modes** (`mode:=`): `rotate` (grab → rotate → release), `hold`, `rotate_only`, `ai_hold`, `servo_hold`.
+
+---
+
 ## ROS2 Topic Reference
 
 | Topic | Type | Published by | Subscribed by | Description |
