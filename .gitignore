@@ -1,3 +1,6 @@
+# ===== Local-only docs folder (kept in the project dir, never uploaded) =====
+knowledge/
+
 # ===== ROS 2 / colcon build artifacts (generated, do not commit) =====
 build/
 install/
@@ -26,6 +29,8 @@ Steeringwheel-Workspace/carla_ros_ws.zip
 ros-g29-force-feedback/
 Steeringwheel-Workspace/ros2_ws/src/ros-g29-force-feedback/
 Steeringwheel-Workspace/ros2_ws/fake_steering.py
+# Vendored CARLA ROS bridge (upstream dependency, ~4.7MB, not our code — clone separately)
+carla_ros_ws/src/ros-bridge/
 
 # Backup USD scenes
 Steeringwheel-Workspace/isaac/scenes/BAKScene2.usd
@@ -33,3 +38,6 @@ Steeringwheel-Workspace/isaac/scenes/BAKScene_old.usd
 Steeringwheel-Workspace/isaac/scenes/editing_layer_bak.usd
 Steeringwheel-Workspace/isaac/scenes/our_table.usd
 Steeringwheel-Workspace/isaac/scenes/table_bak.usd
+
+# ===== Personal-work export (destined for a separate course repo, not this one) =====
+MY_PERSONAL_WORK/
