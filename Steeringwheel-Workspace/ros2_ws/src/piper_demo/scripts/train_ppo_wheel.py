@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import time
 import numpy as np
 import gymnasium as gym
@@ -12,7 +13,9 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import CheckpointCallback
 
 
-MODEL_PATH = "/tmp/wheel_hold_policy_big_action.zip"
+# Persist the trained policy alongside the checkpoints (was /tmp, which is wiped on reboot)
+MODEL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ppo_wheel_models_big_action")
+MODEL_PATH = os.path.join(MODEL_DIR, "wheel_hold_policy_big_action.zip")
 
 
 class WheelHoldIsaacRosEnv(gym.Env):

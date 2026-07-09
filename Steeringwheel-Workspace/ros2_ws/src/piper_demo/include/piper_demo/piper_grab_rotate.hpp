@@ -34,7 +34,7 @@ public:
     std::string frame = "world";
     std::string tf_frame = "g29_joint_axis";
     bool publish_static_tf = true;
-    tf2::Vector3 center{0.63854, 0.0, 0.85729};
+    tf2::Vector3 center{0.60, 0.0, 0.85729};
     tf2::Quaternion q{0.369082, -0.369084, -0.603141, 0.603139};
   };
 
@@ -73,7 +73,7 @@ public:
 
     Wheel wheel;
 
-    double radius = 0.16;
+    double radius = 0.13;
     double start_angle_deg = 90.0;
 
     double rotate_deg = -55.0;

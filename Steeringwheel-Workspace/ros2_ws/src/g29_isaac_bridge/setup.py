@@ -19,6 +19,7 @@ setup(
             'g29_pid_controller = g29_isaac_bridge.g29_pid_controller:main',
             'g29_ai_pid_controller = g29_isaac_bridge.AI_g29_pid_controller:main',
             'g29_position_controller = g29_isaac_bridge.g29_position_controller:main','aruco_detector = g29_isaac_bridge.aruco_detector:main',
+            'wheel_state_bridge = g29_isaac_bridge.wheel_state_bridge:main',
         ],
     },
 )
