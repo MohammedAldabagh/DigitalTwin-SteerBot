@@ -209,7 +209,7 @@ grasps it, and rotates it along the true arc — rather than a naive joint-space
 
 **Isaac Sim, RViz, and the real arm — moving as one:**
 
-![Grab & Rotate — sim and real](media/grab_rotate_sim_real.mp4)
+[![Grab & Rotate — sim and real](images/thumbs/grab_rotate_sim_real.jpg)](media/grab_rotate_sim_real.mp4)
 
 </div>
 
@@ -228,11 +228,11 @@ refuses to move rather than acting on stale or guessed data.
 
 **Marker visible → grab & rotate runs:**
 
-![Marker visible — grab runs](media/aruco_grab.mp4)
+[![Marker visible — grab runs](images/thumbs/aruco_grab.jpg)](media/aruco_grab.mp4)
 
 **Marker covered → arm refuses:**
 
-![Marker covered — arm refuses](media/aruco_refuse.mp4)
+[![Marker covered — arm refuses](images/thumbs/aruco_refuse.jpg)](media/aruco_refuse.mp4)
 
 </div>
 
@@ -249,7 +249,7 @@ steering angle back toward the wheel/arm through the same interface.
 
 **Driving CARLA with the real G29:**
 
-![Driving CARLA with the real G29](media/carla_g29.mp4)
+[![Driving CARLA with the real G29](images/thumbs/carla_g29.jpg)](media/carla_g29.mp4)
 
 </div>
 
@@ -297,13 +297,13 @@ recover from a real disturbance and stay under a degree. Both satisfy the task.
 
 **Self-tuning PID holding in Isaac Sim:**
 
-![Self-tuning PID holding](media/ai_pid_hold.mp4)
+[![Self-tuning PID holding](images/thumbs/ai_pid_hold.jpg)](media/ai_pid_hold.mp4)
 
 **PPO — training, then holding the wheel:**
 
-![PPO training in Isaac Sim](media/ppo_training.mp4)
+[![PPO training in Isaac Sim](images/thumbs/ppo_training.jpg)](media/ppo_training.mp4)
 
-![PPO holding the wheel](media/ppo_hold.mp4)
+[![PPO holding the wheel](images/thumbs/ppo_hold.jpg)](media/ppo_hold.mp4)
 
 </div>
 
